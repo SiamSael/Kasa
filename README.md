@@ -1,3 +1,27 @@
+--
+PROCEDURE INSTALL PROJET REACT
+--
+
+npm init react-app kasa
+cd kasa
+npm install react-router-dom@6.14.0
+npm install sass
+nbp run build
+npm start 
+
+--
+PROCEDURE GITHUB
+--
+
+sur gitHub = création d'un nouveau référentiel.(nom= kasa url = https://github.com/SiamSael/Kasa.git)
+
+git remote add kasa https://github.com/SiamSael/Kasa.git
+git push --set-upstream kasa master
+git add *
+git commit -m"projet kasa react étape 0 installation"
+git push kasa
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
