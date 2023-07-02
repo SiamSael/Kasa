@@ -1,0 +1,8 @@
+@mixin collapsible__content {
+    color: $primary-color-element;
+    font-style: normal;
+    font-weight: 400;
+    background-color: $secondary-color-element;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
