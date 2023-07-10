@@ -193,7 +193,7 @@ body {
     transform: rotate(0deg);
   }
 }
-.about .collapsible {
+.collapsible {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -202,11 +202,11 @@ body {
   margin-bottom: 40px;
 }
 @media (max-width: 670px) {
-  .about .collapsible {
+  .collapsible {
     width: 86%;
   }
 }
-.about .collapsible__title {
+.collapsible__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -217,10 +217,10 @@ body {
   font-size: 24px;
   font-weight: 500;
 }
-.about .collapsible__content {
+.collapsible__content {
   overflow: hidden;
 }
-.about .collapsible__content--show {
+.collapsible__content--show {
   color: #FF6060;
   font-style: normal;
   font-weight: 400;
@@ -232,7 +232,7 @@ body {
   margin-top: 0;
   transition: margin-top 0.4s ease-in-out;
 }
-.about .collapsible__content--hide {
+.collapsible__content--hide {
   color: #FF6060;
   font-style: normal;
   font-weight: 400;
@@ -241,8 +241,26 @@ body {
   border-bottom-left-radius: 5px;
   font-size: 18px;
   padding: 16px 24px 16px 24px;
-  margin-top: -100%;
+  margin-top: -200%;
   transition: margin-top 0.4s ease-in-out;
+}
+
+.furtherInfos .collapsible {
+  width: 100% !important;
+}
+.furtherInfos .collapsible__title {
+  font-size: 18px;
+  border-radius: 10px;
+}
+.furtherInfos .collapsible__content--show {
+  border-radius: 10px;
+}
+.furtherInfos .collapsible__content--hide {
+  border-radius: 10px;
+}
+
+.description {
+  flex-wrap: wrap;
 }
 
 .error {
@@ -330,6 +348,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: 250px;
+  text-decoration: none;
 }
 @media (max-width: 480px) {
   .card {
@@ -358,4 +377,130 @@ body {
   font-size: 18px;
   transform: translateY(-72px);
   text-overflow: ellipsis;
+}
+
+.logement {
+  margin: 0 auto;
+  width: 86%;
+  position: relative;
+}
+.logement__slideshow {
+  width: 100%;
+  height: 424px;
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 670px) {
+  .logement__slideshow {
+    height: 256px;
+  }
+}
+
+.lodgement {
+  display: grid;
+  grid-template-areas: "title title host" "location location host" "tags tags tags";
+}
+@media (max-width: 670px) {
+  .lodgement {
+    grid-template-areas: "title title title" "location location location" "tags tags tags" "host host host";
+  }
+}
+.lodgement__title {
+  grid-area: title;
+  margin-top: 32px;
+  font-size: 36px;
+  font-weight: 500;
+  color: #FF6060;
+  text-overflow: clip;
+}
+.lodgement__location {
+  grid-area: location;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FF6060;
+}
+
+.host-and-ratings {
+  grid-area: host;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(32px);
+}
+@media (max-width: 670px) {
+  .host-and-ratings {
+    transform: translateY(24px);
+    flex-wrap: wrap;
+  }
+}
+.host-and-ratings__host {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+.host-and-ratings__host--name {
+  width: 92px;
+  margin-right: 16px;
+  align-self: center;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FF6060;
+}
+.host-and-ratings__host--img {
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+.host-and-ratings__ratings {
+  margin-top: 16px;
+  color: #FF6060;
+  align-self: flex-end;
+}
+@media (max-width: 670px) {
+  .host-and-ratings__ratings {
+    align-self: flex-start !important;
+    transform: translateY(-56px);
+  }
+}
+
+.tags {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  grid-area: tags;
+}
+.tags__tag {
+  margin-top: 16px;
+  padding: 4px 32px;
+  border-radius: 10px;
+  background-color: #FF6060;
+  color: #F6F6F6;
+  margin-right: 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.fa-star {
+  margin: 0px 4px;
+}
+
+.neutralStar {
+  color: #F6F6F6 !important;
+}
+
+.furtherInfos {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 56px;
+       column-gap: 56px;
+}
+@media (max-width: 670px) {
+  .furtherInfos {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=App.css.map */

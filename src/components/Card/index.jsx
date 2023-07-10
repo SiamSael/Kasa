@@ -1,16 +1,22 @@
- const Card = (prop) => {
-/*
-    function handleClick() {
-        
+import { Link } from 'react-router-dom';
+import Logement from '../../pages/Logement';
+import { useState } from 'react';
+   
+const Card = (logement) => {
+
+    const [datas, setData] = useState('');
+
+    function sendDatas(logement) {
+        setData(logement)
     }
-*/    
     return (
-        <div key={prop.id} className="card">
-            <img className="card__img" src={prop.cover} alt={prop.title}/>
-            <p className="card__text">{prop.title}</p>
-        </div>
+        <Link key={logement.id} className="card" to={`logement/${logement.id}`} onClick={() => sendDatas(logement)}>
+            <Logement sendDatas={datas} />
+            <img className="card__img" src={logement.cover} alt={logement.title}/>
+            <p className="card__text">{logement.title}</p> 
+            {}
+        </Link>
     )
- 
 }
 
 export default Card

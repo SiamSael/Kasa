@@ -1,6 +1,6 @@
 import logoFooter from "../../assets/FooterLOGO.png"
 
-function Footer() {
+const Footer = () => {
 
     const law = "2020 Kasa. All rights reserved"
     

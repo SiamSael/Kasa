@@ -14,7 +14,7 @@ const Collapsible = (prop) => {
                 <i className={isOpen ? "fa fa-chevron-up animation" : "fa fa-chevron-up animation-reverse"} onClick={handleClick}></i>
             </p>
             <div className="collapsible__content">
-                <p className={isOpen ? "collapsible__content--show" : "collapsible__content--hide"}>{prop.description}</p>
+                <div className={isOpen ? "collapsible__content--show" : "collapsible__content--hide"}>{prop.description}</div>
             </div>
         </li>
     )

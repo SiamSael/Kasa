@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import logo from "../../assets/HeaderLOGO.png"
 
-function Header() {
+const Header = () => {
     return (
         <header className="header">
             <img className="header__logo" src={ logo } alt="logo de kasa" />

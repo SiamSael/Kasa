@@ -1,4 +1,4 @@
-function Banner(bannerImg, $isDisplayTitle) {
+const Banner = (bannerImg, $isDisplayTitle) => {
 
   const title = "Chez vous, partout et ailleurs"
 
