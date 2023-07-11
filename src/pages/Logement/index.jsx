@@ -1,7 +1,8 @@
-import {useParams} from 'react-router-dom'; 
-import Collapsible from '../../components/Collapse';
-import Slideshow from '../../components/Slideshow';
-import logements from "../../datas/logements"
+import {useParams} from 'react-router-dom'
+import Collapsible from '../../components/Collapse'
+import Slideshow from '../../components/Slideshow'
+import logements from '../../datas/logements'
+import { Navigate } from 'react-router-dom'
 
 
 const Logement = () => {
@@ -9,6 +10,10 @@ const Logement = () => {
     const {logementId} = useParams();
 
     const logement = logements.find(el => el.id === logementId)
+
+    if (logement === undefined) {
+        return (<Navigate to="/Error" />)
+    }
 
     const description = {
         name: 'description',
