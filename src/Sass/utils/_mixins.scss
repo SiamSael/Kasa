@@ -6,3 +6,13 @@
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
+@mixin chevron {
+    font-size: 80px;
+    color: $secondary-color-element;
+    position: absolute;
+    top: 41%;
+    @media (max-width: 670px) {
+        font-size: 32px;
+    }
+}

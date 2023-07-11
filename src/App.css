@@ -384,18 +384,6 @@ body {
   width: 86%;
   position: relative;
 }
-.logement__slideshow {
-  width: 100%;
-  height: 424px;
-  border-radius: 25px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 670px) {
-  .logement__slideshow {
-    height: 256px;
-  }
-}
 
 .lodgement {
   display: grid;
@@ -503,4 +491,84 @@ body {
     display: flex;
     flex-direction: column;
   }
+}
+
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 424px;
+}
+@media (max-width: 670px) {
+  .slideshow {
+    height: 256px;
+  }
+}
+.slideshow__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.fa-chevron-left {
+  font-size: 80px;
+  color: #F6F6F6;
+  position: absolute;
+  top: 41%;
+  left: 2%;
+}
+@media (max-width: 670px) {
+  .fa-chevron-left {
+    font-size: 32px;
+  }
+}
+
+.fa-chevron-right {
+  font-size: 80px;
+  color: #F6F6F6;
+  position: absolute;
+  top: 41%;
+  right: 2%;
+}
+@media (max-width: 670px) {
+  .fa-chevron-right {
+    font-size: 32px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  z-index: 10;
+}
+
+.dot {
+  margin-inline: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dot_selected {
+  background-color: #fff;
+}
+
+.dot_selected .hide {
+  display: none;
 }/*# sourceMappingURL=App.css.map */

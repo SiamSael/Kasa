@@ -2,15 +2,6 @@
     margin: 0 auto;
     width: 86%;
     position: relative;
-    &__slideshow {
-        width: 100%;
-        height: 424px;
-        border-radius: 25px;
-        object-fit: cover;
-        @media (max-width: 670px) {
-            height: 256px;
-        }
-    }
 }
 .lodgement {
     display: grid;
@@ -118,4 +109,35 @@
     }
 }
 
+.slideshow {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 424px;
+    @media (max-width: 670px) {
+        height: 256px;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: contain;
+        position: absolute;
+	    z-index: -1;
+    }
+}
 
+.fa-chevron-left {
+    @include chevron;
+    left: 2%
+}
+
+.fa-chevron-right {
+    @include chevron;
+    right: 2%
+}
+
+.hide {
+    display: none;
+}
