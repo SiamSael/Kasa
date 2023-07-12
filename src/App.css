@@ -1,43 +1,3 @@
-/*
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-*/
 * {
   margin: 0;
   padding: 0;
@@ -263,6 +223,120 @@ body {
   flex-wrap: wrap;
 }
 
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 424px;
+}
+@media (max-width: 670px) {
+  .slideshow {
+    height: 256px;
+  }
+}
+.slideshow__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+.slideshow__count {
+  display: flex;
+  font-size: 32px;
+  font-weight: 500;
+  color: #F6F6F6;
+  position: absolute;
+  bottom: 16px;
+  left: 47%;
+}
+@media (max-width: 670px) {
+  .slideshow__count {
+    font-size: 18px;
+  }
+}
+
+.fa-chevron-left {
+  font-size: 80px;
+  color: #F6F6F6;
+  position: absolute;
+  top: 41%;
+  cursor: pointer;
+  left: 2%;
+}
+@media (max-width: 670px) {
+  .fa-chevron-left {
+    font-size: 32px;
+  }
+}
+
+.fa-chevron-right {
+  font-size: 80px;
+  color: #F6F6F6;
+  position: absolute;
+  top: 41%;
+  cursor: pointer;
+  right: 2%;
+}
+@media (max-width: 670px) {
+  .fa-chevron-right {
+    font-size: 32px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.cards {
+  box-sizing: border-box !important;
+  width: 86%;
+  padding: 40px;
+  margin-bottom: 48px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  text-decoration: none;
+}
+@media (max-width: 480px) {
+  .card {
+    height: 150px;
+  }
+}
+.card__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  filter: brightness(75%);
+}
+.card__text {
+  color: #fff;
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
 .error {
   display: flex;
   flex-direction: column;
@@ -325,52 +399,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.cards {
-  box-sizing: border-box !important;
-  width: 86%;
-  padding: 40px;
-  margin-bottom: 48px;
-  background-color: #F6F6F6;
-  border-radius: 25px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 40px;
-}
-@media (max-width: 480px) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-}
-
-.card {
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  height: 250px;
-  text-decoration: none;
-}
-@media (max-width: 480px) {
-  .card {
-    height: 150px;
-  }
-}
-.card__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 0;
-  border-radius: 10px;
-  cursor: pointer;
-  filter: brightness(75%);
-}
-.card__text {
-  color: #fff;
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
 }
 
 .logement {
@@ -485,58 +513,4 @@ body {
     display: flex;
     flex-direction: column;
   }
-}
-
-.slideshow {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 424px;
-}
-@media (max-width: 670px) {
-  .slideshow {
-    height: 256px;
-  }
-}
-.slideshow__img {
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  z-index: -1;
-}
-
-.fa-chevron-left {
-  font-size: 80px;
-  color: #F6F6F6;
-  position: absolute;
-  top: 41%;
-  cursor: pointer;
-  left: 2%;
-}
-@media (max-width: 670px) {
-  .fa-chevron-left {
-    font-size: 32px;
-  }
-}
-
-.fa-chevron-right {
-  font-size: 80px;
-  color: #F6F6F6;
-  position: absolute;
-  top: 41%;
-  cursor: pointer;
-  right: 2%;
-}
-@media (max-width: 670px) {
-  .fa-chevron-right {
-    font-size: 32px;
-  }
-}
-
-.hide {
-  display: none;
 }/*# sourceMappingURL=App.css.map */
