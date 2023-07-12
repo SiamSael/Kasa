@@ -12,6 +12,7 @@
     color: $secondary-color-element;
     position: absolute;
     top: 41%;
+    cursor: pointer;
     @media (max-width: 670px) {
         font-size: 32px;
     }
