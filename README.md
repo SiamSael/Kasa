@@ -21,11 +21,16 @@ git add *
 git commit -m"projet kasa react étape 0 installation"
 git push kasa
 
+Ajouter dans package.json :
+    - A la racine : 
+        "homepage": "https://siamsael.github.io/Kasa/",
+
 npm install gh-pages --save-dev
 
-Ajouter dans package.json, dans "scripts" :
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+Ajouter dans package.json :
+    - Dans "scripts" :
+        "predeploy" : "npm run build",
+        "deploy" : "gh-pages -b master -d build",
 
 
 # Getting Started with Create React App
