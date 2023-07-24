@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <img className="footer__img" src={ logoFooter } alt="logo de kasa" />
-        <p className="footer__p"><i className="fa-regular fa-copyright"></i>{ law }</p>
+            <p className="footer__p"><i className="fa-regular fa-copyright"></i>{ law }</p>
         </footer>
     )
 }
