@@ -32,6 +32,9 @@ Ajouter dans package.json :
         "predeploy" : "npm run build",
         "deploy" : "gh-pages -d build --remote kasa",
 
+Dans index.js, penser à renseigner le router basename :
+    <Router basename={process.env.PUBLIC_URL}>
+
 npm run deploy
 
 
