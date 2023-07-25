@@ -30,12 +30,10 @@ npm install gh-pages --save-dev
 Ajouter dans package.json :
     - Dans "scripts" :
         "predeploy" : "npm run build",
-        "deploy" : "gh-pages -b master -d build",
+        "deploy" : "gh-pages -d build --remote kasa",
 
-/*
-    git remote add origin https://github.com/SiamSael/Kasa.git
-    npm run deploy
-*/
+npm run deploy
+
 
 # Getting Started with Create React App
 
