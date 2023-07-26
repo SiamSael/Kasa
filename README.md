@@ -35,6 +35,18 @@ Ajouter dans package.json :
 Dans index.js, penser à renseigner le router basename :
     <Router basename={process.env.PUBLIC_URL}>
 
+!! ATTENTION !!
+L'usage de GitHub Pages oblige l'utilisation de HashRouter à la place de BrowserRouter.
+
+Du coup, il faut remplacer 
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+par 
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+
+Et ne plus utiliser "basename" dans le router
+
+
 npm run deploy
 
 
